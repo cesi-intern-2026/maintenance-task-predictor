@@ -25,33 +25,18 @@ import streamlit as st
 # Constants
 # ==========================================================================
 
+BASE_DIR = Path(__file__).resolve().parent
+
 MODEL_OPTIONS = {
     "V1 — Clustering": {
-        "model": Path(
-            r"C:\Users\wille\OneDrive - Association Cesi Viacesi mail"
-            r"\Bureau\send_to_intern\V1 clustering\models V1"
-            r"\maintenance_task_model.joblib"
-        ),
-        "meta": Path(
-            r"C:\Users\wille\OneDrive - Association Cesi Viacesi mail"
-            r"\Bureau\send_to_intern\V1 clustering\models V1"
-            r"\model_metadata.json"
-        ),
+        "model": BASE_DIR / "models" / "V1 clustering" / "models V1" / "maintenance_task_model.joblib",
+        "meta": BASE_DIR / "models" / "V1 clustering" / "models V1" / "model_metadata.json",
     },
     "V2 — Reduced data": {
-        "model": Path(
-            r"C:\Users\wille\OneDrive - Association Cesi Viacesi mail"
-            r"\Bureau\send_to_intern\V2 reduced DATA\models"
-            r"\maintenance_task_model.joblib"
-        ),
-        "meta": Path(
-            r"C:\Users\wille\OneDrive - Association Cesi Viacesi mail"
-            r"\Bureau\send_to_intern\V2 reduced DATA\models"
-            r"\model_metadata.json"
-        ),
+        "model": BASE_DIR / "models" / "V2 reduced DATA" / "models" / "maintenance_task_model.joblib",
+        "meta": BASE_DIR / "models" / "V2 reduced DATA" / "models" / "model_metadata.json",
     },
 }
-
 TRUTHY = {"Y", "YES", "1", "TRUE", "T", "YA"}
 
 # Human-readable labels for model targets.
